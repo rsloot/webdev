@@ -1,0 +1,25 @@
+#top-title {
+	text-align: center;
+	color: black;
+	text-decoration: none;
+}
+#timeline {
+	text-align: center;
+}
+
+#post {
+	/*background-color: lightgrey;*/
+	font-family: Helvetica;
+	/*text-align: center;*/
+}
+
+.post-creator {
+	text-decoration: none;
+	color: lightgrey;
+}
+.post-creator:hover {
+	color:black;
+}
+#creator-link {
+	color:red;
+}

@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Ryan's Watchlist</title>
+</head>
+
+<body>
+
+<h3>Buys</h3>
+
+	{% if quotes %}
+	{% for i in range(quotes | length) %}
+		<li><a href="https://finance.yahoo.com/q?s={{quotes[i]}}">{{company[i]}}</a> {{price[i]}} {%if change[i] > 0%}<span style="color: green">(+{{change[i]}})</span>
+			{% else %} <span style="color: red">({{change[i]}})</span>
+			{%endif%}
+			-- ({{fifty_two_range[i]}})
+
+	{% endfor %}
+	{%endif%}
+<br><br>
+<h3>Don't touch</h3>
+	{% if bad_quotes %}
+	{% for i in range(quotes | length) %}
+		<li><a href="https://finance.yahoo.com/q?s={{bad_quotes[i]}}">{{x_company[i]}}</a> {{x_price[i]}} {%if x_change[i] > 0%}<span style="color: green">(+{{x_change[i]}})</span>
+			{% else %} <span style="color: red">({{x_change[i]}})</span>
+			{%endif%}
+			-- ({{x_fifty_two_range[i]}})
+
+	{% endfor %}
+	{%endif%}
+
+
+</body>
+
+
+</html>

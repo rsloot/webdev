@@ -1,0 +1,115 @@
+/*STYLING FOR DUH WIKI*/
+
+/*duh wiki title*/
+.wiki-title {
+	text-align: left;
+	padding: .5%;
+	color: darkgreen;
+	text-decoration: none;
+	font-size: 30px;
+}
+/*created, contrib., last mod*/
+#detail-block {
+	color: lightgrey;
+	width: 80%;
+	/*padding-left: 70%;*/
+	padding-top: 2%;
+	text-align: right;
+}
+.profile-links {
+	color: lightgrey;
+	text-decoration: none;
+}
+.profile-links:hover {
+	color: black;
+	text-decoration: underline;
+}
+/*title of a wikipage*/
+#page-title {
+	font-size: 20px;
+	font-family: Helvetica;
+	text-decoration: underline;
+}
+/*wiki page content body*/
+#content {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    width: 80%;
+    margin: 0 auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: .5%;
+    padding-bottom: 1%;
+    color: #333;
+}
+/*signup block*/
+#signblock {
+	padding: 0.5%;
+}
+
+#sign {
+	text-decoration: none;
+	color: #000;
+}
+#sign:hover {
+	color: grey;
+}
+
+#edit {
+    position: fixed;
+    top: 2%;
+    right: 1%;
+}
+
+#edit-link {
+	text-decoration: none;
+    color: gray;
+}
+#edit-link:hover {
+	color: darkgreen;
+	/*background-color: lightgray;*/
+}
+
+#content-box {
+	width: 60%;
+	height: 200px;
+}
+#wiki-list{
+	position: fixed;
+	bottom: 1%;
+	width: 20%;
+	left: 1%;
+}
+#wiki-list-text {
+	color: gray;
+	text-decoration: none;
+}
+
+#list-links {
+	color: darkgreen;
+}
+#list-links:hover {
+	color: black;
+}
+
+#wiki-list-text:hover {/*, #blog-linkt:hover {*/
+	color: darkgreen;
+}
+#blog-link {
+	position: fixed;
+	text-align: center;
+	width: 10%;
+	left: 45%;
+	bottom: 1%; 
+}
+
+#blog-linkt {
+	text-align: center;
+	color: gray;
+}
+
+#calc-link {
+    position: absolute;
+    top:100%;
+    right: 100%;
+}

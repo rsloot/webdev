@@ -1,0 +1,15 @@
+{% extends "hiddenBlog.html" %}
+
+{% block content %}
+<a href="/ryanshiddenblog/newpost" id="newpostlink">Add new post</a>
+
+{% for p in posts %}
+	{{ p.render() | safe }}
+	<br><br>
+	{% endfor %}
+	
+<div class="age">
+	{{age}}
+</div>
+	
+{% endblock %}

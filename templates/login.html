@@ -1,0 +1,58 @@
+{% extends "favR.html" %}
+{% block content %}
+
+<html>
+<head>
+<title>Login</title>
+</head>
+
+<style type="text/css">
+    .label {
+        text-align: left;
+    }
+    error {
+        color: red;
+    }
+    #register {
+        color: #1E90FF;
+        text-decoration: none;
+    }
+    #register:hover {
+        color: black;
+    }
+</style>
+    
+<h2>Login</h2>
+<form method="post">
+    <table>
+        <tr>
+            <td class="label">
+                Username </td>
+            <td>
+                <input type = "text" name = "username" value = "{{username}}">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="label">
+                Password </td>
+            <td>
+                <input type = "password" name = "password" value = "{{password}}">
+            </td>
+        </tr>
+
+      
+    </table>
+   
+    <input type = "submit">
+	
+    <error> {{error}}</error>
+
+    <br>
+    <br>
+    Not Registered? 
+    <a href="/signup" id="register">Sign up</a>
+</form>
+</html>
+
+{% endblock %}

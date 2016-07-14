@@ -1,0 +1,20 @@
+{% extends "wikibase.html" %}
+
+{% block content %}
+<!-- <html>
+<head>
+	<title>Ryan's Wiki</title>
+</head>
+ -->
+ <h2 style="text-align:center" id="page-title">{{page_title}}</h2>
+ <br>
+<body>
+	{{content | safe}}
+	<!-- <a href="/blog" style="color:darkblue; text-decoration: none; text-align: center; font-weight: bold;">Link to Blog</a> -->
+</body>
+
+<!-- </html> -->
+
+<!-- <div id="wiki-list"><a href="/wikilist">List of all wiki pages</a></div> -->
+<span id="wiki-list"><a href="/wikilist" id="wiki-list-text">List of all wiki pages</a></span>
+{% endblock %}

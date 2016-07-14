@@ -1,0 +1,25 @@
+#link {
+	text-decoration: none;
+	color: darkblue;
+}
+
+body {
+	padding-top: 2.5%;
+	width: 100%;
+	text-align: center;
+	vertical-align: center;
+}
+
+#rotbox {
+	 height: 20%; 
+	 width: 40%;
+}
+
+#button {
+	height: 5%;
+	width: 115px;
+	background: rgb(28, 184, 65);
+	color: white;
+	border-radius: 4px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,90 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="../stylesheets/strike.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+
+	<title>Strike</title>
+
+	<link type="text/css" rel='stylesheet' href='../styles/bootstrap.min.css' />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57002012-2', 'auto');
+  // ga('require', 'linkid', 'linkid.js');
+  // ga('require', 'displayfeatures');
+  // ga('set', '&uid', {{USER_ID}}); // Set the user ID using signed-in user_id.
+  ga('send', 'pageview');
+</script>
+	<script>
+// // 	var uri = window.location.toString();
+// // 	cat = document.getElementById('')
+// // 	function getOption() {
+// //     var obj = document.getElementById("cat-dropdown");
+// //     document.getElementById("demo").innerHTML = 
+// //     obj.options[obj.selectedIndex].text;
+// // }
+// // 	$('#cat-dropdown').change(function(){
+// //     // if (uri.indexOf("#") > 0) {
+// //     	// var clean_uri = uri.substring(0, uri.indexOf("#"));
+// //     	// window.history.replaceState({}, document.title, clean_uri);
+// //     	// location.reload()
+// //     	uri.
+// // }
+// //     }
+// // });
+// 	</script> 
+</head>
+<body>
+<!-- <form action="strike" method="GET">
+ <select name="q" onchange="this.form.submit()"> -->
+<!-- <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="?q=news">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+  </div>
+</select>
+</form>  -->
+
+
+<span><form action="strike" method="GET">
+<select name="q" onchange="this.form.submit()">
+	<option>--Select Topic--</option>
+	<option id="sports" value="sports">Sports</option>
+	<option id="news" value="news">News</option>
+	<option value="business">Business</option>
+	<option value="tech">Technology</option>
+	<option value="science">Science</option>
+	<option value="health">Health</option>
+	<option value="other">Something Random</option>
+</select>
+</form></span>
+<div id="top-title"><a href="/strike" id="top-title">STRIKE</a></div>
+<br>
+
+<div id='timeline'>
+	{% for p in posts %}
+		<div id="post">{{p.render_strike() | safe}}</div><br>
+	{% endfor %}
+
+</div>
+
+<script src='../js/jquery-2.2.0.min.js'></script>
+		<script src='../js/bootstrap.min.js'></script>
+
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+{% extends "wikibase.html" %}
+
+
+<html>
+<head>
+	<title>Edit {{edit_id}}</title>
+</head>
+
+<body>
+{% block content %}
+	<br>
+	<form method="post">
+    <textarea name="content" id="content-box">{{content}}</textarea>
+    <br>
+    <input type="submit">
+    {{error}}
+	</form>
+
+</body>
+{% endblock %}
+</html>

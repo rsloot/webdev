@@ -1,0 +1,5 @@
+cron:
+- description: "Check for new best sellers"
+  url: /tasks/nytimes
+  schedule: every monday 14:00
+  # timezone: US/Arizona

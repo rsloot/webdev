@@ -1,0 +1,64 @@
+{% extends "favR.html" %}
+{% block content %}
+
+<head>
+<title>Sign Up</title>
+<style type="text/css">
+    .label {text.align: right}
+    .error {color: red}
+    #register {
+        color: #1E90FF;
+        text-decoration: none;}
+    #register:hover {color: black;}
+</style>
+</head>
+    
+<h2>Signup</h2>
+<form method="post">
+    <table>
+        <tr>
+            <td class="label">
+                Username </td>
+            <td>
+                <input type = "text" name = "username" value = "{{username}}">
+            </td>
+            <td class="error">{{error_username}}</td>
+        </tr>
+
+        <tr>
+            <td class="label">
+                Password </td>
+            <td>
+                <input type = "password" name = "password" value = "{{password}}">
+            </td>
+            <td class="error">{{error_password}}</td>
+        </tr>
+
+        <tr>
+            <td class="label">
+                Verify Password </td>
+            <td>
+                <input type = "password" name = "verify" value = "{{verify}}">
+            </td>
+            <td class="error">{{error_verify}}</td>
+        </tr>
+
+        <tr>
+            <td class="label">
+                Email (optional) </td>
+            <td>
+                <input type = "email" name = "email" value = "{{email}}">
+            </td>
+            <td class="error">{{error_email}}</td>
+                <td><input type="checkbox" name="subscribe" checked> Subscribe to Email<td>
+        </tr>
+    </table>
+   
+    <input type = "submit">
+    <br>
+    <br>
+    Already Registered? 
+    <a href="/login" id="register">Sign in</a>
+</form>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "favR.html" %}
+{% block content %}
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="../stylesheets/rot13.css" />
+  <title>Rot13</title>
+
+</head>
+
+<body>
+<h2>Rot13</h2>
+<form method="post">
+    <textarea name="text" id="rotbox">{{rot}}</textarea>
+    <br>
+    <input type="submit" id="button" value="Encrypt">
+</form>
+
+<br>
+<a href="/blog" id="link">Ryan Sloot's blog</a>
+
+</body>
+</html>
+
+{% endblock %}

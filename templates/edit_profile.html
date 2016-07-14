@@ -1,0 +1,48 @@
+{% extends "favR.html" %}
+{% block content %}
+
+<html>
+<head>
+<title>Edit Profile</title>
+<style type="text/css">
+    .label {text.align: right;}
+    .error {color: red;}
+</style>
+</head>
+<body>
+
+<h2>Editing {{user}} Profile</h2>
+
+<form method="post" enctype="multipart/form-data">
+	<table>
+
+		<tr>
+            <td class="label">Username </td>
+            <td>
+				<input type="text" value="{{user}}" name="username"> <td class="error">{{invalidUsername}}</td><td class="error">{{userTakenError}}</td>        
+			</td>
+        </tr>
+
+        <tr>
+            <td class="label">Email </td>
+            <td>
+				<input type="email" value="{{email}}" name="email"> <td class="error">{{emailError}}</td>
+			</td>
+        </tr>
+
+        <tr>
+            <td class="label">Profile Image </td>
+            <td>
+                <input type="file" name="img" accept=".jpeg,,.png"> <td class="error">{{imageError}}</td>
+            </td>
+        </tr>
+
+		<tr class="label">
+			<td><input type="submit"></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
+
+{% endblock %}

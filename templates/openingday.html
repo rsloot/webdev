@@ -1,0 +1,48 @@
+{% extends "favR.html" %}
+{% block content %}
+
+<html>
+<head>
+<title>Opening Day!!</title>
+      <link type="text/css" rel="stylesheet" href="../stylesheets/openingday.css" />
+
+
+</head>
+
+
+<body>
+
+<div id="pic"><img src="/images/openingDay.png"></div>
+
+<div id="form">
+<form method="POST">
+		Get favorite team's current tweets!:<br>
+<input type="text" name="team_name" paceholder="Dbacks">
+<br><br>
+<input type="submit" value="Get Tweets!">
+</form>
+<div>
+
+
+<div id="twitter">
+<a class="twitter-timeline"
+  href="https://twitter.com/hashtag/{{team_name}}" 
+  data-widget-id="585212491191476224"
+  data-screen-name="{{team_name}}">#{{team_name}} Tweets</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+
+<!-- 
+{% if tweets %}
+{% for i in range(tweets | length) %}
+	<li>{{tweets['statuses'][i]['text']}}</li>
+{% endfor %}
+{% endif %}
+ -->
+
+</body>
+
+
+</html>
+
+{% endblock %}

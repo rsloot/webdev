@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>Ryan Sloot py</title>
+
+<meta name="Description"
+  content="Creator: Ryan Sloot, website created in web developlement class at Udacity" />
+</head>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57002012-2', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+
+<body>
+<form method="post">
+    What is your birthday?
+    <br>
+    <label>
+        Month
+        <input type="text" name="month" value="{{month}}">
+    </label>
+    <label>
+        Day
+        <input type="text" name="day" value="{{day}}">
+    </label>
+    <label>
+        Year
+        <input type="text" name="year" value="{{years}}">
+    </label>
+    <div style = "color:red">{{error}}</div>
+    <br>
+    <input type = "submit">
+</form>
+<br>
+<a href="http://ryanslootpy.appspot.com/blog">Ryan Sloot's Blog</a>
+<br>
+<a href="http://ryanslootpy.appspot.com/rot13">rot something</a>
+
+</body>
+</html>

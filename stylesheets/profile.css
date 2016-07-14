@@ -1,0 +1,149 @@
+body {
+	width: 100%;
+	font-family: Helvetica;
+	/*margin: 0 auto;*/
+	text-align: center;
+}
+#link-to-wiki {
+	text-decoration: none;
+	color: lightgrey;
+	position: fixed;
+	text-align: center;
+	width: 10%;
+	left: 47%;
+	bottom: 1%;
+}
+#link-to-wiki:hover {
+	text-decoration: underline;
+}
+#follow-unfollow {
+	position: absolute;
+	top: 1%;
+	left: 1%;
+}
+#following {
+	top:0%;
+	color: darkgreen;
+}
+
+#follow-button {
+	width: 150%;
+	background: rgb(28, 184, 65);
+	color: white;
+	font-weight: bold;
+	border-radius: 4px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);	
+}
+#unfollow-button {
+	/*height: 5%;*/
+	width: 100%;
+	background: rgb(48, 65, 87);
+	color: white;
+	border-radius: 4px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);	
+}
+/*followers*/
+.row {
+	/*right: 5%;*/
+	/*width: 10%;*/
+	/*top:1%;*/
+	display: inline-table;
+	text-align: center;
+    word-wrap: break-word;
+}
+/*following*/
+.rows {
+	/*width: 10%;*/
+	/*right: 15%;*/
+	/*top:1%;*/
+	display: inline-table;
+    word-wrap: break-word;
+    text-align: center;
+}
+#profile-title {
+	color: #3C3B3B;
+	font-family: Helvetica;
+	text-align: center;
+	font-size: 150%;
+	display: inline;
+}
+#blog-link {
+/* 	top: 0%; */
+/* 	text-align: center; */
+	text-decoration: none;
+	color: #3C3B3B;
+}
+#blog-link:hover {
+	text-decoration: underline;
+	color:black;
+}
+.follows {
+	text-decoration: none;
+	color: #3C3B3B;
+}
+.follows:hover {
+	color: black;
+	background-color: lightgrey;
+	/*font-weight: bold;*/
+}
+
+#edit-link {
+	text-decoration: none;
+	color: lightgrey;
+	/*text-align: left;*/
+}
+#edit-link:hover{
+	color: #3C3B3B;
+}
+#edit {
+	position: absolute;
+	top: 2%;
+	text-align: center;
+	left: 1%;
+/* 	width: 50%; */
+}
+#email {
+	text-align: center;
+}
+#list {
+	text-align: center;
+	text-decoration: none;
+	top: 10%;
+}
+#contrib-list {
+	/*display: table-row;*/
+	color: darkgreen;
+	font-size: 20px;
+}
+#contrib-list:hover {
+	text-decoration: none;
+}
+.hides, .hide {
+	color: black;
+}
+.hide:hover, .hides:hover{
+	text-decoration: none;
+}
+.shows, .show {
+	text-decoration: none;
+	color: darkgrey;
+}
+.shows:hover, .show:hover {
+	text-decoration: underline;
+	background-color: lightgrey;
+}
+
+.row { vertical-align: top; height:auto !important; }
+.list {display:none; }
+.show {display: none; }
+.hide:target + .show {display: inline; }
+.hide:target {display: none; }
+.hide:target ~ .list {display:inline; }
+.rows { vertical-align: top; height:auto !important; }
+.lists {display:none; }
+.shows {display: none; }
+.hides:target + .shows {display: inline; }
+.hides:target {display: none; }
+.hides:target ~ .lists {display:inline; }
+@media print { .hides, .shows { display: none; } }
+@media print { .hide, .show { display: none; } }

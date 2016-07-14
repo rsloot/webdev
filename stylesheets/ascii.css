@@ -1,0 +1,60 @@
+body {
+	position: relative;
+	font-family: sans-serif;
+	width: 80%;
+	margin: 0 auto;
+	padding: 10px;
+}
+				
+.map {
+	position: absolute;
+	width: 47.5%;
+	height: 17.5%;
+	right: 0;
+	top: 112px;
+}
+		
+.error {
+	color: red;
+}
+		
+label {
+	display: block;
+	font-size: 20px;
+}
+			
+input[type=text] {
+	width: 47.5%;
+	font-size: 20px;
+	padding: 2px;
+}
+			
+textarea {
+	width: 47.5%;
+	height: 200px;
+	font-size: 17px;
+	font-family: monospace;
+}
+			
+input[type=submit] {
+	font-size: 120%;
+	width: 48%
+}
+	
+hr {
+	margin-: 20px auto;
+}
+			
+.art + .art {
+	margin-top: 20px;
+}
+		
+.art-title {
+	font-weight: bold;
+	font-size: 100%;
+}
+			
+.art-body {
+	margin: 0;
+	font-size: 100%;
+}

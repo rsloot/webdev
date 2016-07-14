@@ -1,0 +1,44 @@
+{% extends "favR.html" %}
+{% block content %}
+
+<html>
+<head>
+<title>My noos</title>
+      <link type="text/css" rel="stylesheet" href="../stylesheets/news.css" />
+</head>
+
+<body>
+
+	<h1 id="page-title">News</h1>
+
+<div id="local">
+		{% if local_heads %}
+		<span id="local-span">Local News for {{local_id}} (Google News)</span>
+		{% for i in range(local_heads | length) %}
+		<li><a href="{{local_links[i]}}" id="local-links">{{local_heads[i]}}</a></li>
+		{% endfor %}
+		{% endif %}
+</div>
+
+<div id="top-news">
+		{% if top_heads %}
+		<span id="topNews-span">Top News for {{country_id}} (Google News)</span>
+		{% for i in range(top_heads | length) %}
+		<li><a href="{{top_links[i]}}" id="top-links">{{top_heads[i]}}</a></li>
+		{% endfor %}
+		{% endif %}
+</div>
+
+<div id="espn">
+
+		{% if espn_heads %}
+		<span id="espn-span">ESPN</span>
+		{% for i in range(espn_heads | length) %}
+		<li><a href="{{espn_links[i]}}" id="espn-links">{{espn_heads[i]}}</a></li>
+		{% endfor %}
+		{% endif %}
+</div>
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,187 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    width: 60%;
+    margin: 0 auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: .5%;
+    padding-bottom: 1%;
+    color: #333;
+    /*position: relative;*/
+}
+
+#espn {
+    position: absolute;
+    top: 15%;
+    left: 1%;
+    width: 17%;
+}
+#espn-span {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+}
+#espn-links {
+    text-decoration: none;
+    color: black;
+    font-size: 80%;
+    word-wrap: break-word;
+}
+#espn-links:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+#weather-title {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#temp-text{
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.error, error {
+    color: red;
+    text-align: right;
+}
+
+label {
+    display: block;
+    font-size: 20px;
+}
+
+label + label {
+    margin-top: 20px;
+}
+
+input[type=text] {
+    width: 500px;
+    font-size: 20px;
+    padding: 2px;
+    font-family: monospace;
+}
+
+textarea {
+  width: 500px;
+  height: 400px;
+  font-size: 17px;
+  font-family: monospace;
+}
+
+input[type=submit] {
+  font-size: 24px;
+}
+
+.main-title {
+    /*display: block;*/
+    color: #222;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #1C3E6B;
+}
+
+.post + .post {
+    margin-top: 15px;
+}
+
+.post-heading {
+    position: relative;
+    border-bottom: 3px solid #666;
+}
+
+.post-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.post-date {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    color: #999;
+}
+
+.post-content {
+    margin-top: 5px;
+}
+.post-creator {
+    margin-top: 1%;
+    margin-left: 1%;
+    color: #D3D3D3;
+}
+#creator-link {
+    color: #D3D3D3;
+    text-decoration: none;
+}
+#creator-link:hover {
+    color: darkblue;
+}
+.age {
+	position: fixed;
+	bottom: 0%;
+	right: 0%;
+	color: red;
+	font-size: 12px;
+}
+
+#newpostlink {
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    color: gray;
+    text-decoration: none;
+    font-size: 16px;
+    width: 20%;
+}
+
+#signblock {
+    position: absolute;
+    top: 2%;
+    right: 1%;
+    width: 20%;
+    text-align: right;
+}
+
+#sign {
+    text-decoration: none;
+    color: gray;
+    font-size: 16px;
+}
+
+#newpostlink:hover {
+    color: darkblue;
+}
+
+#sign:hover {
+    color: darkblue;
+/*    background-color: green;*/
+}
+
+#wiki-link {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    bottom: 1%; 
+}
+#wiki-linkt {
+    text-align: center;
+    color: gray;
+}
+
+#calc-link {
+    position: absolute;
+    top:100%;
+    right: 100%;
+}

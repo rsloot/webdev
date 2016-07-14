@@ -1,0 +1,11 @@
+{% extends "favR.html" %}
+{% block content %}
+
+{% if user%}
+<h2>User <span style="color:red">{{user}}</span> Not Found</h2>
+{% else %}
+<h2>Bad Request</h2>
+{% endif %}
+<a href="/" style="color: darkgreen">Back to wiki</a>
+
+{% endblock %}

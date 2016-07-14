@@ -1,0 +1,20 @@
+{% extends "wikibase.html" %}
+<html>
+<head>
+<title>Duh Wiki List</title>
+</head>
+
+<body>
+
+{% block content %}
+
+<h2>Duh pages currently with content (alphabetically sorted)</h2>
+<br>
+
+	{% for i in wikilist%}
+		<li><a href="{{i}}" id="list-links">{{i}}</a></li>
+	{% endfor %}
+{% endblock %}
+
+</body>
+</html>

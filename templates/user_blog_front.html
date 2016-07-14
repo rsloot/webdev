@@ -1,0 +1,14 @@
+{% extends "user_blogBase.html" %}
+
+{% block content %}
+
+{% if curUser %}
+	<a href="/blog/newpost/{{username}}" id="newpostlink">Add new post</a>
+{% endif %}
+
+{% for p in posts %}
+	{{ p.render() | safe}}
+	<br><br>
+	{% endfor %}
+		
+{% endblock %}

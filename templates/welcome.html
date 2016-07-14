@@ -1,0 +1,40 @@
+{% extends "favR.html" %}
+{% block content %}
+<html>
+  <head>
+  	      <!-- <link type="text/css" rel="stylesheet" href="../stylesheets/welcome.css" /> -->
+          <style>
+            html {
+              font-family: Helvetica, Arial, sans-serif;
+              font-size: 24px;}
+            h4 {
+              text-align: center;
+              font-size: 20px;}
+            #choice {
+              font-size: 60px;
+              display: inline-block;
+              text-decoration: none;
+              width: 100%;
+              text-align: center;}
+            #blog-choice{left: 30%;}
+            #wiki-choice {right: 30%;}
+            #blog-choice:hover {color: red;}
+            #wiki-choice:hover {color: blue;}
+            /*#separator{font-size: 20px}*/
+          </style>
+
+    <title>Welcome</title>
+  </head>
+
+  <body>
+    {{alert | safe}}
+    <h2 style="text-align:center">Welcome{%if username%}{{" "}}{{username}}{%endif%}!</h2>
+    <h4>Choose:</h4>
+    <div id="choice">
+    	<a href="/" id="wiki-choice"><img src="../images/wikilogo.png"></a> 
+      <span id="separator">or<span> 
+    	<a href="/blog" id="blog-choice"><img src="../images/bloglogo.png"></a>
+	</div>
+  </body>
+</html>
+{% endblock %}
