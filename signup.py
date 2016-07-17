@@ -237,7 +237,7 @@ class Login(Handler):
         password = self.request.get('password')
         lower_name = username.lower()
 
-        logging.error(str(loginId))
+        # logging.error(str(loginId))
         user = User.by_lower_name(username)
         if user is None:
             msg = 'Invalid login'
@@ -270,7 +270,7 @@ class Logout(Handler):
             # self.login(u)
             self.logout()
             referer = self.request.referer.replace('/logout','')
-            logging.error(str(referer))
+            # logging.error(str(referer))
             self.redirect(referer)
 
 

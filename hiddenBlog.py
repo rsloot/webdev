@@ -59,18 +59,27 @@ class HiddenPosts(db.Model):
 
 
 class BlogHandler(signup.Handler, Handler):
-	def get(self):
-		if self.user:
-			u = self.user.name
-			if u == me:
-				posts, age = get_posts(update=True)				
-				self.render("hiddenBlog_fill.html", posts = posts, age = 1, 
-					username="%s" % self.user.name)
-			else:
-				self.render("access_denied.html", u=u)
-				logging.error(u)
-		else:
-			self.render("access_denied.html", u='')
+    def get(self):
+        if self.user:
+            if self.format == 'html':
+                u = self.user.name
+                if u == me:
+                    posts, age = get_posts(update=True)				
+                    self.render("hiddenBlog_fill.html", posts = posts, age = 1, 
+                                username="%s" % self.user.name)
+                else:
+                    self.render("access_denied.html", u=u)
+                    logging.error(u)
+            else:
+                u = self.user.name
+                if u == me:
+                    posts, age = get_posts(update=True)
+                    return self.render_json([p.as_dict() for p in posts])
+                else:
+                    self.render('access_denied.html', u=u)
+                    logging.error(u)
+        else:
+            self.render("access_denied.html", u='')
 
 
 class NewPost(signup.Handler, Handler):

@@ -96,11 +96,11 @@
 	color: darkgreen;
 }
 #blog-link {
-	position: fixed;
-	text-align: center;
-	width: 10%;
-	left: 45%;
-	bottom: 1%; 
+	position: relative;
+    text-align: center;
+    width: 100%;
+    bottom: 1%;
+    padding-top: 5%;
 }
 
 #blog-linkt {

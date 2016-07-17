@@ -1,5 +1,6 @@
 import signup
 from handler import *
+from secrets import me
 from secrets import sg_username, sg_password
 # import wikidb as db
 from datetime import datetime
@@ -132,7 +133,7 @@ class EditPage(signup.Handler, Handler):
         content = self.request.get("content")
         content = content.replace('\n', '<br>')
         # if creator is not me santize html
-        if creator != "Ryan":
+        if creator != me:
             content = sanitize_html(content)
 
         if content and not page:

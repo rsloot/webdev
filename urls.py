@@ -20,6 +20,7 @@ class google_var(signup.Handler):
 
 application = webapp2.WSGIApplication([
     ('/ryanshiddenblog/?',  hiddenBlog.BlogHandler),
+    ('/ryanshiddenblog/?(?:\.json)?', hiddenBlog.BlogHandler),
     ('/ryanshiddenblog/newpost/?', hiddenBlog.NewPost),
     ('/strike/?', strike.Strike),
     ('/d3try/?', strike.d3tryHandler),
