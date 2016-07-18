@@ -268,10 +268,19 @@ class Logout(Handler):
             self.redirect("../welcome")
         else:
             # self.login(u)
+            # logging.error(str(self), str(logid))
             self.logout()
-            referer = self.request.referer.replace('/logout','')
-            # logging.error(str(referer))
-            self.redirect(referer)
+            referer = self.request.referer
+            if referer:
+                ref = self.request.referer.replace('/logout','')
+                # logging.error(str(referer))
+                self.redirect(ref)
+            elif logid:
+                self.redirect('..%s' % logid)
+
+            else:
+                self.redirect('../')
+
 
 
 class WelcomeHandler(Handler):
