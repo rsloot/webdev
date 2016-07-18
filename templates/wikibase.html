@@ -31,6 +31,20 @@
 				<link rel="shortcut icon" type="image/png" href="/images/favicons/favicon-16x16.png">
 				<link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
 
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(window).scroll(function() {
+                    if ($('body').height() <= ($(window).height() + $(window).scrollTop())) {
+						document.getElementById('long-post-blog-link').style.display = 'inline-block';
+					}
+					else {
+						document.getElementById('blog-link').style.display = 'none';
+					}
+                });
+            });    
+        </script>
+
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -60,7 +74,10 @@
 	<a href="/login/" id="sign">{{login}}</a>
 	<a href="/strike/{{username}}" id="sign">{{username}}</a><a href="/logout/" id="sign">{{logout}}</a>
 </div>
-		<body>
+
+
+
+<body>
 				
 				<meta itemprop="creator" content="Ryan Sloot" />
 
@@ -69,7 +86,6 @@
 				{% endblock %}
 				</div>
 
-				
 
 <div id="detail-block">
 				{%if creator and modifiers and last_modified%}
@@ -89,5 +105,9 @@
 
 		</body>
 		<a href="http://oneryansloot.appspot.com" id="calc-link">.</a>
-		<div id="blog-link"><a href="/blog" id="blog-linkt">Link to Blog</a></div>		
+    	<div id="blog-link"><a href="/blog" id="blog-linkt">Link to Blog</a></div>
+
+    	<div id="long-post-blog-link"><a href="/blog" id="blog-linkt">Link to Blog</a></div
+
+
 </html>

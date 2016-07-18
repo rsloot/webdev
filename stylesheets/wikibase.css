@@ -1,5 +1,10 @@
 /*STYLING FOR DUH WIKI*/
 
+body {
+	/*margin: 0 auto;*/
+	height:  100%;
+}
+
 /*duh wiki title*/
 .wiki-title {
 	text-align: left;
@@ -96,9 +101,21 @@
 	color: darkgreen;
 }
 #blog-link {
-	position: relative;
+	position: fixed;
+	/*display: ;*/
     text-align: center;
-    width: 100%;
+    width: 20%;
+    left: 40%;
+    bottom: 1%;
+    padding-top: 5%;
+}
+
+#long-post-blog-link {
+	position: relative;
+	display: none;
+	text-align: center;
+    width: 20%;
+    left: 40%;
     bottom: 1%;
     padding-top: 5%;
 }
