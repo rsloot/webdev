@@ -102,6 +102,8 @@ input[type=submit] {
 }
 
 .post-title {
+    text-decoration: None;
+    color: #4F4E4E;
     font-size: 24px;
     font-weight: bold;
 }

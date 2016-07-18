@@ -60,6 +60,7 @@ class BlogPost(db.Model):
     creator = db.StringProperty(required = False)
     created = db.DateTimeProperty(auto_now_add = True)
     last_modified = db.DateTimeProperty(auto_now = True)
+    permalink = db.StringProperty(required = False)
 
     def render(self):
         self._render_text = self.content.replace('\n', '<br>')
@@ -71,7 +72,8 @@ class BlogPost(db.Model):
              'content': self.content,
              'creator': self.creator,
              'created': self.created.strftime(time_fmt),
-             'last_modified': self.last_modified.strftime(time_fmt)}
+             'last_modified': self.last_modified.strftime(time_fmt),
+             'permalink': self.permalink}
         return d
 
 class MainPage(signup.Handler, Handler):
@@ -88,7 +90,7 @@ class MainPage(signup.Handler, Handler):
             newPost = False
         # get ip/coords for openweathermap api 
         # return current temp according to city name recieved from hostip api
-        ip = self.request.remote_addr#"74.125.74.194"#"218.107.132.66"#"184.179.24.180"#"74.125.74.194"#"100.179.24.100"##test-ips##"
+        ip = self.request.remote_addr#"74.125.74.194"#""218.107.132.66"#"184.179.24.180"#"74.125.74.194"#"100.179.24.100"##test-ips##"
         # logging.error(ip)
         t=None
         try:
@@ -206,6 +208,9 @@ class Permalink(Handler):
         if not post:
             self.error(404)
             return
+        post.permalink = post_id
+        post.put()
+
         if self.format == 'html':
             self.render("permalink.html", subject=post.subject,
                         content=post.content, age = age_str(age))

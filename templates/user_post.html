@@ -1,11 +1,7 @@
 <div class="post">
 	<div class="post-heading">
 		<div class="post-title">
-			{% if p.permalink %}
-				<a class="post-title" href="/blog/{{p.permalink}}">{{ p.subject }}</a>
-			{% else %}
-			{{p.subject}}
-			{% endif %}
+			{{ p.subject }}
 		</div>
 		
 		<div class="post-date">

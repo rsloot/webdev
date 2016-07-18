@@ -128,7 +128,7 @@ class UserBlogPost(db.Model):
 
     def render(self):
         self._render_text = self.content.replace('\n', '<br>')
-        return render_str("post.html", p = self)
+        return render_str("user_post.html", p = self)
     def render_strike(self):
         self._render_text = self.tldr.replace('\n', '<br')
         return render_str('strike_post.html', p = self)
