@@ -4,6 +4,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 secrets.py
+func_tests.py
 BloggerExample.py
 index.yaml
 jsontry.py
