@@ -104,7 +104,12 @@ class MainPage(signup.Handler, Handler):
         else:
             tester12 = None
         # check ipInfo gave us right info back
-        if re.match('^[a-zA-Z]+', tester12):
+        if tester12 == None:
+            temp=0.0
+            city=""
+            state=""
+            icon_img=""
+        elif re.match('^[a-zA-Z]+', tester12):
             name = None
             city, state, country = t
             name = city+state+","+country

@@ -72,12 +72,14 @@ def make_salt(length = 5):
 
 def make_pw_hash(name, pw, salt = None):
     if not salt:
-        salt = make_salt()
+        # salt = make_salt()
+        salt = pw_hash_secret
     h = hashlib.sha256(name + pw + salt).hexdigest()
-    return '%s,%s' % (salt, h)
+    return '%s' % h
 
 def valid_pw(name, password, h):
-    salt = h.split(',')[0]
+    salt = pw_hash_secret#h.split(',')[0]
+    # logging.error(h)
     return h == make_pw_hash(name, password, salt)
 
 def users_key(group = 'default'):

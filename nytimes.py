@@ -55,7 +55,7 @@ class nytimes(Handler):
 		rv = client.messages.create(to=my_phone,
 									from_=twilio_number,
 									body=text_body)
-		logging.error
+		# logging.error
 		
 
 
